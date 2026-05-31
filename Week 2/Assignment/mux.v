@@ -11,7 +11,7 @@ module mux2 #(parameter WIDTH = 8) (
     input              sel,
     output [WIDTH-1:0] y
 );
-    // YOUR CODE HERE
+    assign y = (sel) ? b : a;// YOUR CODE HERE
     // Hint: one line with assign and ternary operator is perfect here
 endmodule
 
@@ -21,5 +21,5 @@ module mux4 #(parameter WIDTH = 8) (
     input  [1:0]       sel,
     output [WIDTH-1:0] y
 );
-    // YOUR CODE HERE
+    assign y = (sel == 2'b11) ? d3 :(sel == 2'b10) ? d2 :(sel == 2'b01) ? d1 : d0; // YOUR CODE HERE
 endmodule
