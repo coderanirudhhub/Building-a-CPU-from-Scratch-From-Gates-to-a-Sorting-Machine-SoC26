@@ -13,11 +13,11 @@ module regfile(
 
     always @(posedge clk) begin
         if (we)
-            // YOUR CODE HERE — write wdata to regs[waddr]
-            ;
+           regs[waddr] <= wdata;  // YOUR CODE HERE — write wdata to regs[waddr]
     end
 
-    // YOUR CODE HERE — assign rdata0 and rdata1 from regs\
+     assign rdata0 = regs[raddr0];
+    assign rdata1 = regs[raddr1];// YOUR CODE HERE — assign rdata0 and rdata1 from regs\
     // assign rdata0 = ...
     // assign rdata1 = ...
 
