@@ -17,22 +17,22 @@ module alu(
       overflow = 1'b0;
 
     if (op == 3'b000) begin
-            {carry, result} = a + b;
-            overflow = (a[7] == b[7]) && (result[7] != a[7]);
+     {carry, result} = a + b;
+         overflow = (a[7] == b[7]) && (result[7] != a[7]);
         end 
     else if(op == 3'b001) begin
-            result = a - b;
-            carry  = (a < b);
-            overflow = (a[7] != b[7]) && (result[7] != a[7]);
+         result = a - b;
+         carry  = (a < b);
+    overflow = (a[7] != b[7]) && (result[7] != a[7]);
         end 
       else if(op == 3'b010)
     result = a & b; 
     else if(op == 3'b011)
-       result = a | b;
+    result = a | b;
       else if (op == 3'b100)
-     result = a ^ b;
-    else if (op == 3'b101)
-     result = a << 1;
+          result = a ^ b;
+ else if (op == 3'b101)
+         result = a << 1;
     else if (op == 3'b110)
      result = a >> 1;
     end
