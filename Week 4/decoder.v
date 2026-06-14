@@ -8,8 +8,8 @@ always @(*) begin
     case(opcode)
         6'b000000: dec[0] = 1; //noop
         // inputs
-        6'b000100: dec[1] = 1;
-        6'b000101: dec[2] = 1;
+        6'b000100: dec[1] = 1;//InputC
+        6'b000101: dec[2] = 1;//InputCE
         6'b000110: dec[3] = 1;
         6'b000111: dec[4] = 1;
 
