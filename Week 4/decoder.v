@@ -6,7 +6,7 @@ module decoder(
 always @(*) begin
     dec = 0;
     case(opcode)
-        6'b000000: dec[0] = 1; // noop
+        6'b000000: dec[0] = 1; //noop
         // inputs
         6'b000100: dec[1] = 1;
         6'b000101: dec[2] = 1;
